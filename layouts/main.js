@@ -43,17 +43,17 @@ export function Main({
               <div className="grid grid-flow-row auto-rows-max gap-6">
                 <h2 className="font-semibold text-gray-400">API Client</h2>
                 <ul className="grid grid-cols-2 grid-flow-row gap-2">
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
                 </ul>
               </div>
               <div className="grid grid-flow-row auto-rows-max gap-6">
@@ -114,17 +114,17 @@ export function Main({
                 </ul>
                 <h2 className="font-semibold text-gray-400">Tools</h2>
                 <ul className="grid grid-cols-2 grid-flow-row gap-2">
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
                 </ul>
               </div>
               <div className="grid grid-flow-row auto-rows-max gap-6">
                 <h2 className="font-semibold text-gray-400">API Parameters</h2>
                 <ul className="grid grid-cols-2 grid-flow-row gap-2">
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
                 </ul>
                 <h2 className="font-semibold text-gray-400">REST API</h2>
                 <ul className="grid grid-cols-2 grid-flow-row gap-2">
-                  <li className="bg-gray-100 rounded h-8 w-full bg-opacity-80"></li>
+                  <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
                 </ul>
               </div>
             </div>
@@ -145,7 +145,7 @@ export function Main({
           </div>
           <div className="col-span-4">
             <ul className="flex relative z-20">
-              <li className="px-8 py-6">Guides</li>
+              <li className="px-8 py-6 cursor-not-allowed">Guides</li>
               <li className="px-8 py-6">
                 <button
                   ref={ecosystemButtonRef}
@@ -154,8 +154,8 @@ export function Main({
                   Ecosystem
                 </button>
               </li>
-              <li className="px-8 py-6">Integrations</li>
-              <li className="px-8 py-6">FAQ</li>
+              <li className="px-8 py-6 cursor-not-allowed">Integrations</li>
+              <li className="px-8 py-6 cursor-not-allowed">FAQ</li>
             </ul>
             <div className="px-8">{children}</div>
           </div>
