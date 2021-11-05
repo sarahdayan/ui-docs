@@ -146,7 +146,15 @@ export function Main({
           <div className="col-span-4">
             <ul className="flex relative z-20">
               <li className="px-8 py-6 cursor-not-allowed">Guides</li>
-              <li className="px-8 py-6">
+              <li
+                className={[
+                  "px-8 py-6",
+                  router.query.focus === "ecosystem" &&
+                    "border-blue-400 ring rounded",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+              >
                 <button
                   ref={ecosystemButtonRef}
                   onClick={() => setIsPullDownMenuOpen((isOpen) => !isOpen)}
@@ -166,7 +174,12 @@ export function Main({
 }
 
 function Sidebar() {
+  const router = useRouter();
   const [isSidebarItemOpen, setIsSidebarItemOpen] = useState(false);
+
+  useEffect(() => {
+    setIsSidebarItemOpen(router.query["sidebar-item-open"] !== undefined);
+  }, [router.query["sidebar-item-open"]]);
 
   return (
     <ul className="grid grid-flow-row gap-2">
@@ -174,7 +187,15 @@ function Sidebar() {
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
-      <li className={[isSidebarItemOpen && "pb-6"].filter(Boolean).join(" ")}>
+      <li
+        className={[
+          isSidebarItemOpen && "pb-6",
+          router.query.focus === "building-search-ui" &&
+            "border-blue-400 ring rounded",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+      >
         <button
           className="py-6"
           onClick={() => setIsSidebarItemOpen((isOpen) => !isOpen)}
