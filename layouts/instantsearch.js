@@ -1,5 +1,6 @@
 import { Main } from "./main";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 export function InstantSearch({ sidebarComponent, currentFlavor }) {
   return (
@@ -30,13 +31,24 @@ export function InstantSearch({ sidebarComponent, currentFlavor }) {
 
 function InstantSearchFlavorSwitcher({ currentFlavor }) {
   const router = useRouter();
+  const [activeSlug, setActiveSlug] = useState("");
+
+  useEffect(() => {
+    setActiveSlug(router.pathname.split("/").at(-1));
+  }, []);
+
+  function patchUrl(flavor) {
+    return router.pathname.replace(currentFlavor, flavor);
+  }
+
+  console.log(currentFlavor);
 
   return (
     <div className="inline-block relative w-64">
       <select
         defaultValue={currentFlavor}
         onChange={(event) => {
-          router.push(`/ui-libraries/${event.target.value}`);
+          router.push(patchUrl(event.target.value));
         }}
         className="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
       >
@@ -44,8 +56,12 @@ function InstantSearchFlavorSwitcher({ currentFlavor }) {
         <option value="react-instantsearch">React InstantSearch</option>
         <option value="vue-instantsearch">Vue InstantSearch</option>
         <option value="angular-instantsearch">Angular InstantSearch</option>
-        <option value="instantsearch-ios">InstantSearch iOS</option>
-        <option value="instantsearch-android">InstantSearch Android</option>
+        {activeSlug !== "server-side-rendering" && (
+          <>
+            <option value="instantsearch-ios">InstantSearch iOS</option>
+            <option value="instantsearch-android">InstantSearch Android</option>
+          </>
+        )}
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
         <svg className="fill-current h-4 w-4" viewBox="0 0 20 20">
