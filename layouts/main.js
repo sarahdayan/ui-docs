@@ -175,10 +175,10 @@ export function Main({
 
 function Sidebar() {
   const router = useRouter();
-  const [isSidebarItemOpen, setIsSidebarItemOpen] = useState(false);
+  const [isSidebarUiItemOpen, setIsSidebarUiItemOpen] = useState(false);
 
   useEffect(() => {
-    setIsSidebarItemOpen(router.query["sidebar-item-open"] !== undefined);
+    setIsSidebarUiItemOpen(router.query["sidebar-item-open"] !== undefined);
   }, [router.query["sidebar-item-open"]]);
 
   return (
@@ -189,7 +189,7 @@ function Sidebar() {
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
       <li
         className={[
-          isSidebarItemOpen && "pb-6",
+          isSidebarUiItemOpen && "pb-6",
           router.query.focus === "building-search-ui" &&
             "border-blue-400 ring rounded",
         ]
@@ -198,14 +198,14 @@ function Sidebar() {
       >
         <button
           className="py-6"
-          onClick={() => setIsSidebarItemOpen((isOpen) => !isOpen)}
+          onClick={() => setIsSidebarUiItemOpen((isOpen) => !isOpen)}
         >
           Building Search UI
         </button>
         <div
           className={[
             "grid-flow-row gap-5 ml-4",
-            isSidebarItemOpen ? "grid" : "hidden",
+            isSidebarUiItemOpen ? "grid" : "hidden",
           ]
             .filter(Boolean)
             .join(" ")}
@@ -232,7 +232,18 @@ function Sidebar() {
       </li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
-      <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+      <li
+        className={[
+          router.query.focus === "personalization" &&
+            "border-blue-400 ring rounded",
+        ]
+          .filter(Boolean)
+          .join(" ")}
+      >
+        <Link href="/personalization/enabling-personalization">
+          <a className="py-6 block">Enabling Personalization</a>
+        </Link>
+      </li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
       <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>

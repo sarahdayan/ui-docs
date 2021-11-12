@@ -97,10 +97,118 @@ function Sidebar() {
       </ul>
       <div className="text-xs uppercase text-gray-400">API reference</div>
       <ul className="grid grid-flow-row gap-2">
-        <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
-        <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
-        <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
-        <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+        <li>
+          <button className="pt-4 pb-6">Basics</button>
+          <div
+            className={["grid-flow-row gap-5 ml-4", true ? "grid" : "hidden"]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            <ul className="grid grid-flow-row gap-2">
+              <li>
+                <Link href="/ui-libraries/vue-instantsearch/api-reference/basics/instantsearch">
+                  <a
+                    className={[
+                      "block py-1 cursor-pointer",
+                      activeSlug === "instantsearch" && "font-bold",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    &lt;ais-instantsearch&gt;
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/ui-libraries/vue-instantsearch/api-reference/basics/index-widget">
+                  <a
+                    className={[
+                      "block py-1 cursor-pointer",
+                      activeSlug === "index-widget" && "font-bold",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    &lt;ais-index&gt;
+                  </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/ui-libraries/vue-instantsearch/api-reference/basics/searchbox">
+                  <a
+                    className={[
+                      "block py-1 cursor-pointer",
+                      activeSlug === "searchbox" && "font-bold",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    &lt;ais-search-box&gt;
+                  </a>
+                </Link>
+              </li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button className="py-6">Results</button>
+          <div
+            className={["grid-flow-row gap-5 ml-4", true ? "grid" : "hidden"]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            <ul className="grid grid-flow-row gap-2">
+              <li>
+                <Link href="/ui-libraries/vue-instantsearch/api-reference/results/hits">
+                  <a
+                    className={[
+                      "block py-1 cursor-pointer",
+                      activeSlug === "hits" && "font-bold",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    &lt;ais-hits&gt;
+                  </a>
+                </Link>
+              </li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <button className="py-6">Routing</button>
+          <div
+            className={["grid-flow-row gap-5 ml-4", true ? "grid" : "hidden"]
+              .filter(Boolean)
+              .join(" ")}
+          >
+            <ul className="grid grid-flow-row gap-2">
+              <li>
+                <Link href="/ui-libraries/vue-instantsearch/api-reference/routing/history">
+                  <a
+                    className={[
+                      "block py-1 cursor-pointer",
+                      activeSlug === "history" && "font-bold",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    history
+                  </a>
+                </Link>
+              </li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
   );
