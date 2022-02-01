@@ -6,14 +6,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "algoliasearch": "4.12.1",
+    "instantsearch.css": "7.4.5",
     "next": "latest",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-instantsearch-dom": "6.22.0",
     "react-use": "17.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
+    "css-loader": "6.5.1",
     "postcss": "^8.3.5",
+    "style-loader": "3.3.1",
     "tailwindcss": "^2.2.4"
   }
 }

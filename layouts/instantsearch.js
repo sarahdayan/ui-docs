@@ -2,11 +2,12 @@ import { Main } from "./main";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-export function InstantSearch({ sidebarComponent, currentFlavor }) {
+export function InstantSearch({ children, sidebarComponent, currentFlavor }) {
   return (
     <Main sidebarComponent={sidebarComponent}>
       <div className="grid grid-cols-3 gap-4">
-        <div className="col-span-2">
+        <div className="col-span-2 space-y-4">
+          {children}
           <ul className="grid grid-flow-row gap-2">
             <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
             <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>

@@ -3,12 +3,11 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { InstantSearch } from "./instantsearch";
 
-export function InstantSearchJs() {
+export function InstantSearchJs({ children }) {
   return (
-    <InstantSearch
-      sidebarComponent={Sidebar}
-      currentFlavor="instantsearch-js"
-    />
+    <InstantSearch sidebarComponent={Sidebar} currentFlavor="instantsearch-js">
+      {children}
+    </InstantSearch>
   );
 }
 

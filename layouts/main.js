@@ -131,8 +131,8 @@ export function Main({
           </div>
         </div>
       </div>
-      <div className="relative container mx-auto bg-gray-50 h-screen">
-        <div className="grid grid-cols-6 h-full">
+      <div className="relative container mx-auto bg-gray-50 min-h-screen">
+        <div className="grid grid-cols-6 min-h-screen">
           <div className="bg-gray-100 col-span-2">
             <Link href="/">
               <a className="block px-8 py-6 text-gray-400 relative z-20 cursor-pointer">
