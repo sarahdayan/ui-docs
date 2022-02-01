@@ -6,7 +6,7 @@ export default function Hits() {
     <>
       <Head>
         <title>
-          &lt;ais-hits&gt; widget reference | InstantSearch.js | Algolia
+          &lt;ais-hits&gt; widget reference | Angular InstantSearch | Algolia
           Documentation
         </title>
       </Head>

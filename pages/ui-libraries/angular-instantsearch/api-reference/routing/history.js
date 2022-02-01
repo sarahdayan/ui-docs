@@ -6,7 +6,8 @@ export default function History() {
     <>
       <Head>
         <title>
-          history router reference | InstantSearch.js | Algolia Documentation
+          history router reference | Angular InstantSearch | Algolia
+          Documentation
         </title>
       </Head>
       <AngularInstantSearch />

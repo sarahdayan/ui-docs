@@ -6,8 +6,8 @@ export default function SearchBox() {
     <>
       <Head>
         <title>
-          &lt;ais-searchbox&gt; widget reference | InstantSearch.js | Algolia
-          Documentation
+          &lt;ais-searchbox&gt; widget reference | Angular InstantSearch |
+          Algolia Documentation
         </title>
       </Head>
       <AngularInstantSearch />

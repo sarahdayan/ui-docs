@@ -6,7 +6,7 @@ export default function InstantSearch() {
     <>
       <Head>
         <title>
-          &lt;ais-instantsearch&gt; widget reference | InstantSearch.js |
+          &lt;ais-instantsearch&gt; widget reference | Angular InstantSearch |
           Algolia Documentation
         </title>
       </Head>

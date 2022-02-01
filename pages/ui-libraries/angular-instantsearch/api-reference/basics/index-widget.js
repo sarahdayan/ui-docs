@@ -6,7 +6,7 @@ export default function Index() {
     <>
       <Head>
         <title>
-          &lt;ais-index&gt; widget reference | InstantSearch.js | Algolia
+          &lt;ais-index&gt; widget reference | Angular InstantSearch | Algolia
           Documentation
         </title>
       </Head>
