@@ -84,7 +84,7 @@ function Sidebar() {
       <div className="text-xs uppercase text-gray-400">API reference</div>
       <ul className="grid grid-flow-row gap-2">
         <li>
-          <button className="pt-4 pb-6">Basics</button>
+          <span className="pt-4 pb-6">Basics</span>
           <div
             className={["grid-flow-row gap-5 ml-4", true ? "grid" : "hidden"]
               .filter(Boolean)
@@ -127,7 +127,7 @@ function Sidebar() {
           </div>
         </li>
         <li>
-          <button className="py-6">Results</button>
+          <span className="py-6">Results</span>
           <div
             className={["grid-flow-row gap-5 ml-4", true ? "grid" : "hidden"]
               .filter(Boolean)
