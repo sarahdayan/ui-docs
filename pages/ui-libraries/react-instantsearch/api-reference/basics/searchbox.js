@@ -6,7 +6,7 @@ export default function SearchBox() {
     <>
       <Head>
         <title>
-          SearchBox widget reference | React InstantSearch | Algolia
+          &lt;SearchBox&gt; widget reference | React InstantSearch | Algolia
           Documentation
         </title>
       </Head>

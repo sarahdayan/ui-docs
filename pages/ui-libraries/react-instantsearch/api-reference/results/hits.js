@@ -6,7 +6,8 @@ export default function Hits() {
     <>
       <Head>
         <title>
-          Hits widget reference | React InstantSearch | Algolia Documentation
+          &lt;Hits&gt; widget reference | React InstantSearch | Algolia
+          Documentation
         </title>
       </Head>
       <ReactInstantSearch />

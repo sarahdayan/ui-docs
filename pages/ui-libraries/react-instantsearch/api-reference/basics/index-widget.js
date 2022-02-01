@@ -6,7 +6,8 @@ export default function Index() {
     <>
       <Head>
         <title>
-          Index widget reference | React InstantSearch | Algolia Documentation
+          &lt;Index&gt; widget reference | React InstantSearch | Algolia
+          Documentation
         </title>
       </Head>
       <ReactInstantSearch />

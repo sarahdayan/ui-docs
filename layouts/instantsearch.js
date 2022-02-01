@@ -38,10 +38,25 @@ function InstantSearchFlavorSwitcher({ currentFlavor }) {
   }, []);
 
   function patchUrl(flavor) {
-    return router.pathname.replace(currentFlavor, flavor);
-  }
+    let newUrl = router.pathname.replace(currentFlavor, flavor);
 
-  console.log(currentFlavor);
+    if (["instantsearch-ios", "instantsearch-android"].includes(flavor)) {
+      newUrl = newUrl.replace("basics/instantsearch", "basics/searcher");
+    }
+
+    if (
+      [
+        "instantsearch-js",
+        "angular-instantsearch",
+        "vue-instantsearch",
+        "react-instantsearch",
+      ].includes(flavor)
+    ) {
+      newUrl = newUrl.replace("basics/searcher", "basics/instantsearch");
+    }
+
+    return newUrl;
+  }
 
   return (
     <div className="inline-block relative w-64">
@@ -58,7 +73,9 @@ function InstantSearchFlavorSwitcher({ currentFlavor }) {
         )}
         <option value="vue-instantsearch">Vue InstantSearch</option>
         <option value="angular-instantsearch">Angular InstantSearch</option>
-        {!["server-side-rendering", "history"].includes(activeSlug) && (
+        {!["server-side-rendering", "history", "index-widget"].includes(
+          activeSlug
+        ) && (
           <>
             <option value="instantsearch-ios">InstantSearch iOS</option>
             <option value="instantsearch-android">InstantSearch Android</option>

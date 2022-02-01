@@ -6,7 +6,7 @@ export default function InstantSearch() {
     <>
       <Head>
         <title>
-          InstantSearch widget reference | React InstantSearch | Algolia
+          &lt;InstantSearch&gt; widget reference | React InstantSearch | Algolia
           Documentation
         </title>
       </Head>

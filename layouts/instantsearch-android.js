@@ -92,35 +92,21 @@ function Sidebar() {
           >
             <ul className="grid grid-flow-row gap-2">
               <li>
-                <Link href="/ui-libraries/instantsearch-js/api-reference/basics/instantsearch">
+                <Link href="/ui-libraries/instantsearch-android/api-reference/basics/searcher">
                   <a
                     className={[
                       "block py-1 cursor-pointer",
-                      activeSlug === "instantsearch" && "font-bold",
+                      activeSlug === "searcher" && "font-bold",
                     ]
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    instantsearch
+                    Searcher
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/ui-libraries/instantsearch-js/api-reference/basics/index-widget">
-                  <a
-                    className={[
-                      "block py-1 cursor-pointer",
-                      activeSlug === "index-widget" && "font-bold",
-                    ]
-                      .filter(Boolean)
-                      .join(" ")}
-                  >
-                    index
-                  </a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/ui-libraries/instantsearch-js/api-reference/basics/searchbox">
+                <Link href="/ui-libraries/instantsearch-android/api-reference/basics/searchbox">
                   <a
                     className={[
                       "block py-1 cursor-pointer",
@@ -129,10 +115,11 @@ function Sidebar() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    searchBox
+                    SearchBox
                   </a>
                 </Link>
               </li>
+              <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
               <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
               <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
               <li className="bg-gray-200 rounded h-6 w-full bg-opacity-75"></li>
@@ -148,7 +135,7 @@ function Sidebar() {
           >
             <ul className="grid grid-flow-row gap-2">
               <li>
-                <Link href="/ui-libraries/instantsearch-js/api-reference/results/hits">
+                <Link href="/ui-libraries/instantsearch-android/api-reference/results/hits">
                   <a
                     className={[
                       "block py-1 cursor-pointer",
@@ -157,7 +144,7 @@ function Sidebar() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    hits
+                    Hits
                   </a>
                 </Link>
               </li>

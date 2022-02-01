@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { InstantSearchIos } from "../../../../../layouts/instantsearch-js";
+import { InstantSearchIos } from "../../../../../layouts/instantsearch-ios";
 
 export default function SearchBox() {
   return (

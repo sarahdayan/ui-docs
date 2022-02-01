@@ -115,7 +115,7 @@ function Sidebar() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    InstantSearch
+                    &lt;InstantSearch&gt;
                   </a>
                 </Link>
               </li>
@@ -129,7 +129,7 @@ function Sidebar() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    Index
+                    &lt;Index&gt;
                   </a>
                 </Link>
               </li>
@@ -143,7 +143,7 @@ function Sidebar() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    SearchBox
+                    &lt;SearchBox&gt;
                   </a>
                 </Link>
               </li>
@@ -171,7 +171,7 @@ function Sidebar() {
                       .filter(Boolean)
                       .join(" ")}
                   >
-                    Hits
+                    &lt;Hits&gt;
                   </a>
                 </Link>
               </li>
