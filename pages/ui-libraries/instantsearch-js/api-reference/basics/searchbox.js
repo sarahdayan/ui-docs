@@ -27,7 +27,9 @@ export default function SearchBoxPage() {
               <div className="font-sans uppercase text-xs tracking-wider mb-4 text-gray-400">
                 Signature
               </div>
-              <code>{`instantsearch.widgets.searchBox({
+              <code
+                dangerouslySetInnerHTML={{
+                  __html: `instantsearch.widgets.searchBox({
   container: string | HTMLElement,
   // Optional parameters
   placeholder?: string,
@@ -37,9 +39,11 @@ export default function SearchBoxPage() {
   showSubmit?: boolean,
   showLoadingIndicator?: boolean,
   queryHook?: (query: string, hook: (value: string) => void) => void,
-  templates?: SearchBoxTemplates,
-  cssClasses?: SearchBoxCSSClasses,
-});`}</code>
+  templates?: <a href="#search-box-templates" class="text-blue-600 hover:underline">SearchBoxTemplates</a>,
+  cssClasses?: <a href="#search-box-css-classes" class="text-blue-600 hover:underline">SearchBoxCSSClasses</a>,
+});`,
+                }}
+              />
             </pre>
             <div className="p-4 space-y-4">
               <div className="font-sans uppercase text-xs tracking-wider text-gray-400">
@@ -75,9 +79,27 @@ export default function SearchBoxPage() {
               experience, so that the user can start searching right away.
             </p>
           </div>
+          <ul className="grid grid-flow-row gap-2">
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+            <li className="bg-gray-200 rounded h-6 w-full bg-opacity-60"></li>
+          </ul>
           <div>
-            <h2 className="text-2xl font-semibold mt-16 mb-4">Types</h2>
-            <h3 className="text-xl font-semibold mt-8 mb-4">
+            <h2 id="types" className="text-2xl font-semibold mt-8 mb-4">
+              Types
+            </h2>
+            <h3
+              id="search-box-templates"
+              className="text-xl font-semibold mt-8 mb-4"
+            >
               SearchBoxTemplates
             </h3>
             <table>
@@ -145,7 +167,10 @@ export default function SearchBoxPage() {
                 </tr>
               </tbody>
             </table>
-            <h3 className="text-xl font-semibold mt-8 mb-4">
+            <h3
+              id="search-box-css-classes"
+              className="text-xl font-semibold mt-8 mb-4"
+            >
               SearchBoxCSSClasses
             </h3>
             <table>
@@ -185,6 +210,11 @@ export default function SearchBoxPage() {
                   </td>
                   <td className="p-2" valign="top">
                     <p>CSS class to add to the form</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-2" colSpan={3}>
+                    etc.
                   </td>
                 </tr>
               </tbody>
